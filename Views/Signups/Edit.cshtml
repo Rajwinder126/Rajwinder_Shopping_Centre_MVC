@@ -1,0 +1,49 @@
+﻿@model Rajwinder_Shopping_Centre_MVC.Models.Signup
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Signup</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="Signup_Name" class="control-label"></label>
+                <input asp-for="Signup_Name" class="form-control" />
+                <span asp-validation-for="Signup_Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Signup_Email" class="control-label"></label>
+                <input asp-for="Signup_Email" class="form-control" />
+                <span asp-validation-for="Signup_Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Signup_Subject" class="control-label"></label>
+                <input asp-for="Signup_Subject" class="form-control" />
+                <span asp-validation-for="Signup_Subject" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Signup_Massage" class="control-label"></label>
+                <input asp-for="Signup_Massage" class="form-control" />
+                <span asp-validation-for="Signup_Massage" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
