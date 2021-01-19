@@ -1,1 +1,2 @@
-﻿
+﻿update-database identity -context ApplicationDbContext
+update-database shopping -context Rajwinder_Shopping_Centre_MVCDatabase
