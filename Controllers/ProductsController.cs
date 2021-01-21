@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -45,7 +46,7 @@ namespace Rajwinder_Shopping_Centre_MVC.Controllers
 
             return View(product);
         }
-
+        [Authorize]
         // GET: Products/Create
         public IActionResult Create()
         {
@@ -71,7 +72,7 @@ namespace Rajwinder_Shopping_Centre_MVC.Controllers
             ViewData["CategoryId"] = new SelectList(_context.Category, "Id", "Category_Name", product.CategoryId);
             return View(product);
         }
-
+        [Authorize]
         // GET: Products/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
@@ -126,7 +127,7 @@ namespace Rajwinder_Shopping_Centre_MVC.Controllers
             ViewData["CategoryId"] = new SelectList(_context.Category, "Id", "Category_Name", product.CategoryId);
             return View(product);
         }
-
+        [Authorize]
         // GET: Products/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {

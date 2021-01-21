@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -24,7 +25,7 @@ namespace Rajwinder_Shopping_Centre_MVC.Controllers
         {
             return View(await _context.Signup.ToListAsync());
         }
-
+        [Authorize]
         // GET: Signups/Details/5
         public async Task<IActionResult> Details(int? id)
         {
@@ -64,7 +65,7 @@ namespace Rajwinder_Shopping_Centre_MVC.Controllers
             }
             return View(signup);
         }
-
+        [Authorize]
         // GET: Signups/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
@@ -115,7 +116,7 @@ namespace Rajwinder_Shopping_Centre_MVC.Controllers
             }
             return View(signup);
         }
-
+        [Authorize]
         // GET: Signups/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
