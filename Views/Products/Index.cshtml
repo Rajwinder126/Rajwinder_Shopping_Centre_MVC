@@ -3,87 +3,99 @@
 @{
     ViewData["Title"] = "Index";
 }
+<!--this page make for giving the information about products And add a image in this page-->
 
 <h1>Index</h1>
+<div class="cl">&nbsp;</div>
+<a href="#">
+    <img src="css/images/IMAGE 1.jpg" alt="" />
+    <div class="cl">&nbsp;</div>
+    </div>
+    <P>
+        Instead, the promotion is all about deals and reminding the consumer that the product is available.
+        A shopping product is a type of product that requires consumer research and comparison of brands.
+        Homogeneous and heterogeneous are the two specific types of shopping products
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Product_Name)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Product_Description)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Product_Type)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Product_Material)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Product_Color)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Product_Size)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Product_Rating)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Product_Price)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Brand)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Category)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Product_Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Product_Description)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Product_Type)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Product_Material)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Product_Color)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Product_Size)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Product_Rating)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Product_Price)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Brand.Brand_Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Category.Category_Name)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+    </P>
+    <p>
+        <a asp-action="Create">Create New</a>
+    </p>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    Product Name
+                </th>
+                <th>
+                    Product Description
+                </th>
+                <th>
+                    Product Type
+                </th>
+                <th>
+                    Product Material
+                </th>
+                <th>
+                    Product Color
+                </th>
+                <th>
+                    Product Size
+                </th>
+                <th>
+                    Product Rating
+                </th>
+                <th>
+                    Product Price
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Brand)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Category)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Product_Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Product_Description)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Product_Type)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Product_Material)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Product_Color)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Product_Size)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Product_Rating)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Product_Price)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Brand.Brand_Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Category.Category_Name)
+                    </td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                        <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                        <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>

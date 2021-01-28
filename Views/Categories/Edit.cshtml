@@ -5,6 +5,7 @@
 }
 
 <h1>Edit</h1>
+    <!--edit page create for edit the category -->
 
 <h4>Category</h4>
 <hr />
@@ -14,12 +15,12 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="Id" />
             <div class="form-group">
-                <label asp-for="Category_Name" class="control-label"></label>
+                <label asp-for="Category_Name" class="control-label">Category Name</label>
                 <input asp-for="Category_Name" class="form-control" />
                 <span asp-validation-for="Category_Name" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Category_Status" class="control-label"></label>
+                <label asp-for="Category_Status" class="control-label">Category Status</label>
                 <input asp-for="Category_Status" class="form-control" />
                 <span asp-validation-for="Category_Status" class="text-danger"></span>
             </div>

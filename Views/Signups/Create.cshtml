@@ -8,27 +8,28 @@
 
 <h4>Signup</h4>
 <hr />
+<!--this page gives the information about how to sign up this page-->
 <div class="row">
     <div class="col-md-4">
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="Signup_Name" class="control-label"></label>
+                <label asp-for="Signup_Name" class="control-label">Signup Name</label>
                 <input asp-for="Signup_Name" class="form-control" />
                 <span asp-validation-for="Signup_Name" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Signup_Email" class="control-label"></label>
+                <label asp-for="Signup_Email" class="control-label">Signup Email</label>
                 <input asp-for="Signup_Email" class="form-control" />
                 <span asp-validation-for="Signup_Email" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Signup_Subject" class="control-label"></label>
+                <label asp-for="Signup_Subject" class="control-label">Signup Subject</label>
                 <input asp-for="Signup_Subject" class="form-control" />
                 <span asp-validation-for="Signup_Subject" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Signup_Massage" class="control-label"></label>
+                <label asp-for="Signup_Massage" class="control-label">Signup Massage</label>
                 <input asp-for="Signup_Massage" class="form-control" />
                 <span asp-validation-for="Signup_Massage" class="text-danger"></span>
             </div>

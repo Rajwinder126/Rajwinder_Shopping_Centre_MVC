@@ -8,18 +8,20 @@
 
 <h4>Order</h4>
 <hr />
+<!--this page is create for edit the orders -->
+
 <div class="row">
     <div class="col-md-4">
         <form asp-action="Edit">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="Id" />
             <div class="form-group">
-                <label asp-for="Order_Quantity" class="control-label"></label>
+                <label asp-for="Order_Quantity" class="control-label">Order Quantity</label>
                 <input asp-for="Order_Quantity" class="form-control" />
                 <span asp-validation-for="Order_Quantity" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Order_Status" class="control-label"></label>
+                <label asp-for="Order_Status" class="control-label">Order Status</label>
                 <input asp-for="Order_Status" class="form-control" />
                 <span asp-validation-for="Order_Status" class="text-danger"></span>
             </div>

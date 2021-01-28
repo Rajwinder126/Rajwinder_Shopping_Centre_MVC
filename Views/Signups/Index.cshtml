@@ -5,49 +5,60 @@
 }
 
 <h1>Index</h1>
+<div class="cl">&nbsp;</div>
+<a href="#">
+    <img src="css/images/IMAGE 1.jpg" alt="" />
+    <div class="cl">&nbsp;</div>
+    </div>
+    <P>
+        You can use the same username and password you created for that product to sign in to any other products.
+        If you can't remember ever signing in and would like to check if you have an account, enter your email address.
 
-<p>
+    </P>
+    <!--this page shows the information about signup page and add image-->
+
     <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Signup_Name)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Signup_Email)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Signup_Subject)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Signup_Massage)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Signup_Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Signup_Email)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Signup_Subject)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Signup_Massage)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+    </p>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                   Signup Name
+                </th>
+                <th>
+                   Signup Email
+                </th>
+                <th>
+                   Signup Subject
+                </th>
+                <th>
+                   Signup Massage
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Signup_Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Signup_Email)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Signup_Subject)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Signup_Massage)
+                    </td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                        <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                        <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>

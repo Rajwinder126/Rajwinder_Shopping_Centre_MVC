@@ -3,39 +3,52 @@
 @{
     ViewData["Title"] = "Index";
 }
+<!---CREATE A INDEX PAGE WITH ATTCH A CONTENT AND IMAGE AND MAKE SOME CHANGES-->
 
 <h1>Index</h1>
+<div class="cl">&nbsp;</div>
+<a href="#">
+    <img src="css/images/IMAGE 1.jpg" alt="" />
+    <div class="cl">&nbsp;</div>
+    </div>
+    <P>
+        A brand is an identifying symbol, mark, logo, name, word and/or sentence that companies use to distinguish their product from others.
+        A logo is a graphic mark, emblem, symbol, or stylized name used to identify a company, organization, product, or brand.
+    </P>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Brand_Name)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Brand_Status)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Brand_Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Brand_Status)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+
+    </div>
+    <p>
+        <a asp-action="Create">Create New</a>
+    </p>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    Brand Name
+                </th>
+                <th>
+                    Brand Status
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Brand_Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Brand_Status)
+                    </td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                        <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                        <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>

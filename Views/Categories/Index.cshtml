@@ -3,39 +3,54 @@
 @{
     ViewData["Title"] = "Index";
 }
+<!--index page is make for a giving the information about Category ATTACH WITH IMAGE-->
 
 <h1>Index</h1>
+<div class="cl">&nbsp;</div>
+<a href="#">
+    <img src="css/images/IMAGE 1.jpg" alt="" />
+    <div class="cl">&nbsp;</div>
+    </div>
+    <P>
+        An organization segregate the goods and services in to various categories such as item price, standard items, item discounts, etc.
+        These categories under which items are placed are called as item categories.
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Category_Name)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Category_Status)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Category_Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Category_Status)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+    </P>
+
+
+
+    </div>
+    <p>
+        <a asp-action="Create">Create New</a>
+    </p>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    Category Name
+                </th>
+                <th>
+                    Category Status
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Category_Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Category_Status)
+                    </td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                        <a asp-action="Details" asp-route-id="@item.Id">Details</a>
+                        <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
